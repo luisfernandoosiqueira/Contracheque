@@ -1,5 +1,5 @@
-
 package telas;
+
 import javax.swing.JFrame;
 import modelos.Funcionario;
 import javax.swing.JOptionPane;
@@ -249,14 +249,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_NomeActionPerformed
 
     private void jButton_CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CalcularActionPerformed
-       try {
-            
-           String nome = jTextField_Nome.getText();
-           int matricula = Integer.parseInt(jTextField_Matricula.getText());
-           int quantidadeDependentes = Integer.parseInt(jTextField_Dependentes.getText());
+        try {
+
+            String nome = jTextField_Nome.getText();
+            int matricula = Integer.parseInt(jTextField_Matricula.getText());
+            int quantidadeDependentes = Integer.parseInt(jTextField_Dependentes.getText());
             float salarioBase = Float.parseFloat(jTextField_SalarioBase.getText());
             int producao = Integer.parseInt(jTextField_Producao.getText());
-            
+
             // Criando o objeto Funcionario usando o construtor padrão
             // Funcionario funcionario = new Funcionario();
             // funcionario.setNome(nome);
@@ -264,42 +264,40 @@ public class TelaPrincipal extends javax.swing.JFrame {
             // funcionario.setQuantidadeDependentes(quantidadeDependentes);
             // funcionario.setSalarioBase(salarioBase);
             // funcionario.setProducao(producao);
-            
-         Funcionario funcionario = new Funcionario(nome, matricula, quantidadeDependentes, salarioBase, producao);
-                        
-       String saida = "GYN ALIMENTOS \n";
-          saida += "CONTRACHEQUE \n";
-         saida += "Nome: " + nome + "\n";
-         saida += "Número de Dependentes: " +  quantidadeDependentes + "\n";
-         saida += "Salário Base: " + String.format("%.2f", salarioBase) + "\n";
-         saida += "Gratificação: " + String.format("%.2f", funcionario.calcularGratificacao()) + "\n";
-         saida += "Salário Bruto: " + String.format("%.2f", funcionario.calcularSalarioBruto()) + "\n";
-         saida += "Desconto INSS: " + String.format("%.2f", funcionario.calcularDescontoINSS()) + "\n";
-        saida += "Desconto IRPF: " + String.format("%.2f", funcionario.calcularDescontoIRPF()) + "\n";
-         saida += "Desconto Fihos: " + String.format("%.2f", funcionario.calcularDescontoFilhos()) + "\n";
-         saida += "Salário Líquido: " + String.format("%.2f", funcionario.calcularSalarioLiquido());
-         
-         jTextArea_Saida.setText(saida);
-            
-        } catch (Exception erro){
-           JOptionPane.showMessageDialog(rootPane, erro.getMessage());
+            Funcionario funcionario = new Funcionario(nome, matricula, quantidadeDependentes, salarioBase, producao);
+
+            String saida = "GYN ALIMENTOS \n";
+            saida += "CONTRACHEQUE \n";
+            saida += "Nome: " + nome + "\n";
+            saida += "Número de Dependentes: " + quantidadeDependentes + "\n";
+            saida += "Salário Base: " + String.format("%.2f", salarioBase) + "\n";
+            saida += "Gratificação: " + String.format("%.2f", funcionario.calcularGratificacao()) + "\n";
+            saida += "Salário Bruto: " + String.format("%.2f", funcionario.calcularSalarioBruto()) + "\n";
+            saida += "Desconto INSS: " + String.format("%.2f", funcionario.calcularDescontoINSS()) + "\n";
+            saida += "Desconto IRPF: " + String.format("%.2f", funcionario.calcularDescontoIRPF()) + "\n";
+            saida += "Desconto Fihos: " + String.format("%.2f", funcionario.calcularDescontoFilhos()) + "\n";
+            saida += "Salário Líquido: " + String.format("%.2f", funcionario.calcularSalarioLiquido());
+
+            jTextArea_Saida.setText(saida);
+
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(rootPane, erro.getMessage());
         }
     }//GEN-LAST:event_jButton_CalcularActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton_SobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SobreActionPerformed
-          
+
 // Cria uma instância da classe Sobre
-    Sobre sobreJanela = new Sobre();
-    
-    // Torna a janela visível
-    sobreJanela.setVisible(true);
-  
-        
-        
+        Sobre sobreJanela = new Sobre();
+
+        // Torna a janela visível
+        sobreJanela.setVisible(true);
+
+
     }//GEN-LAST:event_jButton_SobreActionPerformed
 
     /**
